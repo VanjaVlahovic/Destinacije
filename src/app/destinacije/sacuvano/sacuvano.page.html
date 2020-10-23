@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Sačuvane destinacije</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-fab-button size="small" color="tertiary" (click)="openModal()">
+        <ion-icon name="color-filter-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background-image">
+  <ion-list>
+    <app-saved-element *ngFor="let s of sacuvane" [destinacija]="s"></app-saved-element>
+  </ion-list>
+</ion-content>
+

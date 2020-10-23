@@ -1,0 +1,11 @@
+.background-image{
+  --background: url(../../../assets/background.jpg) 0 0/100% 100% no-repeat;
+}
+ion-list{
+  box-shadow: none;
+  background: transparent;
+  border-radius: 5px;
+}
+ion-button{
+  position:center;
+}

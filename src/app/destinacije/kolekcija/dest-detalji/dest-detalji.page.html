@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/destinacije/tabs/kolekcija">
+      </ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Informacije</ion-title>
+
+    <ion-buttons slot="end">
+      <div (click)="poruka()">
+      <ion-fab-button size="small" color="tertiary" (click)="onEditDest()" [disabled]="disable">
+        <ion-icon name="pencil"></ion-icon>
+      </ion-fab-button>
+      </div>
+      <div (click)="poruka()">
+      <ion-fab-button size="small" color="tertiary" (click)="onDeleteDest()" [disabled]="disable">
+        <ion-icon name="trash"></ion-icon>
+      </ion-fab-button>
+      </div>
+    </ion-buttons>
+
+  </ion-toolbar>
+
+  </ion-header>
+
+<ion-content class="background-image">
+
+  <div class="ion-text-center" *ngIf="isLoading">
+    <ion-spinner color="primary"></ion-spinner>
+  </div>
+
+  <ion-card *ngIf="!isLoading">
+    <ion-img [src]="destinacija.imageUrl"></ion-img>
+    <ion-card-header>
+      <ion-card-title>
+        <h1>{{destinacija.naziv}}</h1>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+       <h2>{{destinacija.opis}}</h2>
+    </ion-card-content>
+    <ion-card-content>
+      <h2>{{destinacija.tip}}</h2>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

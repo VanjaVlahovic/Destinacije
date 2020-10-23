@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Izmena profila</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="onCancel()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="background-image">
+  <form #f="ngForm" (ngSubmit)="editProfile()">
+    <ion-grid>
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-item>
+            <ion-input type="text" [ngModel]="ime" name="ime"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-item>
+            <ion-input type="text" rows="6" [ngModel]="email" name="email" disabled></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-radio-group (ionChange)="avatar($event)" allow-empty-selection = true>
+            <ion-list-header>
+              <h1>Vaš avatar</h1>
+            </ion-list-header>
+            <ion-item>
+              <ion-avatar>
+                <img src="https://thumbs.dreamstime.com/b/cute-vector-girl-avatar-icon-happy-woman-red-lips-pretty-cute-vector-girl-avatar-icon-happy-woman-red-lips-pretty-lady-108313736.jpg">
+              </ion-avatar>
+              <ion-radio slot="start" value="https://thumbs.dreamstime.com/b/cute-vector-girl-avatar-icon-happy-woman-red-lips-pretty-cute-vector-girl-avatar-icon-happy-woman-red-lips-pretty-lady-108313736.jpg"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-avatar>
+                <img src="https://www.pngarts.com/files/5/Cartoon-Avatar-Transparent-Image.png">
+              </ion-avatar>
+              <ion-radio slot="start" value="https://www.pngarts.com/files/5/Cartoon-Avatar-Transparent-Image.png"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-avatar>
+                <img src="https://www.2700chess.com/img/avatar/noavatar.png">
+              </ion-avatar>
+              <ion-radio slot="start" value="https://www.2700chess.com/img/avatar/noavatar.png"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-button type="submit" color="primary" expand="block" [disabled]="f.invalid">Sačuvaj izmene</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

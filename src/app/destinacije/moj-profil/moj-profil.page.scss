@@ -1,0 +1,29 @@
+ion-title{
+  text-align:center;
+}
+.background-image{
+  --background: url(../../../assets/background.jpg) 0 0/100% 100% no-repeat;
+}
+#images {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 606px;
+}
+ion-avatar{
+  -webkit-border-radius: 40px;
+
+}
+.img {
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+.main-image, .user-image {
+  width: 200px;
+  height: 200px;
+}
+ion-card{
+  margin-top:40px;
+}

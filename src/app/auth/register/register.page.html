@@ -1,0 +1,70 @@
+<ion-content class="background-image">
+  <ion-card>
+    <ion-card-header>
+      FORMA ZA REGISTRACIJU
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+
+
+
+        <ion-list no-line>
+          <ion-row>
+            <ion-col size-sm="3" offset-sm="3">
+              <ion-item>
+                <ion-input type="text" formControlName="name" placeholder="Ime"></ion-input>
+              </ion-item>
+            </ion-col>
+
+            <ion-col size-sm="3">
+              <ion-item>
+                <ion-input type="text" formControlName="surname" placeholder="Prezime"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col size-sm="6" offset-sm="3">
+              <ion-item>
+
+                <ion-input type="email" formControlName="email" placeholder="E-mail"></ion-input>
+              </ion-item>
+            </ion-col>
+
+
+          </ion-row>
+          <ion-row *ngIf="registerForm.get('email').invalid && registerForm.get('email').touched">
+            <ion-col size-sm="6" offset-sm="3">
+              <p>E-mail adresa mora biti validna.</p>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col size-sm="6" offset-sm="3">
+              <ion-item>
+
+                <ion-input type="password" formControlName="password"placeholder="Password" ></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+          <ion-row *ngIf="registerForm.get('password').invalid && registerForm.get('password').touched">
+            <ion-col size-sm="6" offset-sm="3">
+              <p>Lozinka mora sadržati minimum 7 znakova.</p>
+            </ion-col>
+
+          </ion-row>
+
+          <ion-row>
+            <ion-col size-sm="6" offset-sm="3">
+              <ion-button type="submit" color="primary" shape="round" expand="block">REGISTRUJTE SE</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-list>
+      </form>
+    </ion-card-content>
+  </ion-card>
+  <ion-button class="prijava" expand="full" color="primary"  shape="round" expand="full" routerLink="/log-in">Imate nalog? PRIJAVITE SE</ion-button>
+</ion-content>

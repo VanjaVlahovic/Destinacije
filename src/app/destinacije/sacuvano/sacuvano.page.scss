@@ -1,0 +1,8 @@
+.background-image{
+  --background: url(../../../assets/background.jpg) 0 0/100% 100% no-repeat;
+}
+ion-list{
+  box-shadow: none;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}

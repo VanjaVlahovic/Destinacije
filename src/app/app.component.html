@@ -1,0 +1,42 @@
+<ion-app>
+
+  <ion-menu side="start" contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Meni</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list no-line>
+        <ion-menu-toggle>
+          <ion-item routerLink="destinacije/tabs/moj-profil">
+            <ion-icon name="person" slot="start"></ion-icon>
+            <ion-label>Moj profil</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/destinacije/tabs/kolekcija">
+            <ion-icon name="images" slot="start"></ion-icon>
+            <ion-label>Kolekcija</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/destinacije/tabs/sacuvano">
+            <ion-icon name="bookmark" slot="start"></ion-icon>
+            <ion-label>Sačuvane objave</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item (click)="onLogOut()">
+            <ion-icon name="log-out" slot="start"></ion-icon>
+            <ion-label >Log out</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+
+</ion-app>

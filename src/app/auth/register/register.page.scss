@@ -1,0 +1,59 @@
+.background-image{
+  --background: url(../../../assets/pozadina.jpg) 0 0/100% 100% no-repeat;
+}
+ion-card{
+  box-shadow: none;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+.prijava{
+
+  margin-bottom: 50px;
+}
+ion-card-header {
+  color: #fff!important;
+  margin-top: 20px;
+  text-align: center;
+  font-family: "Lucida Fax";
+}
+
+.lime{
+  border-bottom: 1px solid grey;
+  margin-bottom: 16px;
+}
+
+
+p {
+  color: black !important;
+  text-align: center;
+  margin-bottom: 70px;
+
+}
+.list > .item-block:first-child {
+  border: medium none;
+}
+
+.item {
+  margin-bottom: 10px;
+  background: rgba(0, 0, 0, 0.1);
+  border: medium none;
+
+  .text-input, {
+    color: #fff;
+  }
+  .list > .item-block:first-child {
+    border: medium none;
+  }
+  input.data{
+    background: rgba(0, 0, 0, 0.1);
+    color: #fff!important;
+  }
+
+  input:-moz-placeholder {
+    color: #fff!important;
+  }
+
+  *::-webkit-input-placeholder  {
+    color: #fff!important;
+  }
+}

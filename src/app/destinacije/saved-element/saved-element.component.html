@@ -1,0 +1,16 @@
+  <ion-card>
+    <ion-item [routerLink]="['/','destinacije', 'tabs', 'kolekcija', destinacija.id]">
+    <ion-img [src]="destinacija.imageUrl"></ion-img>
+    </ion-item>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>{{destinacija.naziv}}</ion-label>
+      </ion-item>
+        <ion-item>
+            <ion-icon name="bookmark" color="tertiary" slot="end" (click)="openAlert($event)"></ion-icon>
+        </ion-item>
+        <ion-item>
+      <app-rating [(rating)]="rating" (click)="oceni()"></app-rating>
+        </ion-item>
+    </ion-card-content>
+  </ion-card>

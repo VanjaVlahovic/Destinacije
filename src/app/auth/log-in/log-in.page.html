@@ -1,0 +1,39 @@
+<ion-content class="background-image">
+  <ion-card>
+    <ion-card-header>
+      FORMA ZA PRIJAVU
+    </ion-card-header>
+    <ion-card-content>
+      <form #logInForm="ngForm" (ngSubmit)="onLogIn(logInForm)">
+        <ion-row>
+          <ion-col size-sm="3" offset-sm="3">
+            <ion-list no-line>
+              <ion-item>
+                <ion-input  type="text" ngModel name="email" required email #email="ngModel" placeholder="E-mail"></ion-input>
+              </ion-item>
+              <ion-item lines="none" *ngIf="email.invalid && email.touched">
+                <ion-text>E-mail adresa mora biti validna.</ion-text>
+              </ion-item>
+              <ion-item>
+                <ion-input type="password" ngModel name="password" required minlength="7" #password="ngModel" placeholder="Lozinka"></ion-input>
+              </ion-item>
+              <ion-item lines="none" *ngIf="password.invalid && password.touched">
+                <ion-label>Lozinka mora sadržati minimum 7 znakova.</ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <ion-col size-sm="6">
+            <ion-button class="bottom"   type="submit"  color="primary" shape="round" expand="block" [disabled]="logInForm.invalid">Prijavite se</ion-button>
+          </ion-col>
+        </ion-row>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-col>
+    <p text-center>Nemate nalog?</p>
+    <ion-button class="bottom" type="submit" color="light"  shape="round" expand="block"  routerLink="/register"> REGISTRUJTE SE</ion-button>
+  </ion-col>
+</ion-content>

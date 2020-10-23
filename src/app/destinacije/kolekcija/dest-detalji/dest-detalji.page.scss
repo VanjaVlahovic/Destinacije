@@ -1,0 +1,14 @@
+.background-image{
+  --background: url(../../../../assets/background.jpg) 0 0/100% 100% no-repeat;
+}
+ion-card{
+  box-shadow: none;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+ion-title{
+  text-align: center;
+}
+h2{
+  color: white;
+}

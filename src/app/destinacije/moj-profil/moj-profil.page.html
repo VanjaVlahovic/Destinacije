@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Moj profil</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-fab-button size="small" color="tertiary" (click)="openModal()">
+        <ion-icon name="pencil"></ion-icon>
+      </ion-fab-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+<ion-content class="background-image">
+  <ion-card>
+    <ion-card-content>
+      <ion-img [src]=""></ion-img>
+      <ion-avatar>
+        <img [src]="user.photoUrl">
+      </ion-avatar>
+      <ion-row>
+      <h2>Ime i prezime:   </h2>
+        <ion-label><h2>{{user.displayName}}</h2></ion-label>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <ion-icon name="logo-google"></ion-icon>
+      <ion-row>
+      <h2>E-mail:</h2>
+      <ion-label><h2>{{user.email}}</h2></ion-label>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
